@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install chrome-launcher-cli
+$ npm install -g chrome-launcher-cli
 ```
 
 
