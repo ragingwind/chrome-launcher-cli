@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import meow = require('meow')
 import chromeLauncher = require('chrome-launcher')
 import decamelize = require('decamelize')
