@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+		"module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "target": "es6",
+    "lib": [
+			"es2015",
+			"es2016",
+			"es2017"
+    ]
+  },
+	"files": [
+		"src/cli.ts"
+	],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "chrome-launcher-cli",
+  "version": "0.0.0",
+  "description": "Chrome Launcher for CLI",
+  "license": "MIT",
+  "repository": "ragingwind/chrome-launcher-cli",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "bin": {
+		"chrome": "./dist/cli.js"
+	},
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo ./src/*.js && yarn build:dev",
+    "build": "tsc",
+		"build:dev": "tsc -w",
+		"prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "chrome",
+    "chrome extension",
+    "cli"
+  ],
+  "dependencies": {
+    "decamelize": "^1.2.0",
+    "meow": "^3.7.0",
+    "typescript": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.41",
+    "@types/node": "^8.0.2",
+    "chrome-launcher": "^0.2.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "semicolon": false,
+    "env": {
+      "browser": true
+    },
+    "globals": [
+      "window"
+    ]
+  }
+}
