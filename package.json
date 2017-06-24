@@ -16,7 +16,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo ./src/*.js && yarn build:dev",
+    "lint": "xo ./src/*.js && yarn build:dev",
     "build": "tsc",
 		"build:dev": "tsc -w",
 		"prepublishOnly": "npm run build"
