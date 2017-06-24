@@ -10,7 +10,7 @@ const cli = meow(`
   	--port: emote debugging port number to use.
   	--chrome-path: Explicit path of intended Chrome binary
   	--user-data-dir: Chrome profile path to use
-		--starting-url: Starting URL to open the browser with, default is about:blank
+	--starting-url: Starting URL to open the browser with, default is about:blank
 	Chrome Flags
 		Additional flags to pass to Chrome like '--headless', '--disable-gpu'
 	Examples
