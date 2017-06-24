@@ -31,10 +31,10 @@
   "dependencies": {
     "decamelize": "^1.2.0",
     "meow": "^3.7.0",
-    "typescript": "^2.3.4",
     "chrome-launcher": "^0.2.1"
   },
   "devDependencies": {
+    "typescript": "^2.3.4",
     "@types/core-js": "^0.9.41",
     "@types/node": "^8.0.2",
     "xo": "^0.18.2"
