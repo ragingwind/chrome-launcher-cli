@@ -5,19 +5,22 @@ import decamelize = require('decamelize')
 
 const cli = meow(`
 	Usage
-	  $ chrome-launcher [input]
-	Options
-  	--port: Remote debugging port number to use.
-  	--chrome-path: Explicit path of intended Chrome binary
-  	--user-data-dir: Chrome profile path to use
-	--starting-url: Starting URL to open the browser with, default is about:blank
+		$ chrome [input] [chrome flags]
+
+	Input
+		--port: Remote debugging port number to use.
+		--chrome-path: Explicit path of intended Chrome binary
+		--user-data-dir: Chrome profile path to use
+		--starting-url: Starting URL to open the browser with, default is about:blank
+
 	Chrome Flags
 		Additional flags to pass to Chrome like '--headless', '--disable-gpu'
+
 	Examples
 		# Run Chrome browser with default options
-	  $ chrome-launcher
-	  # Run Chrome browser in headless mode
-	  $ chrome-launcher --headless
+		$ chrome
+		# Run Chrome browser in headless mode
+		$ chrome --headless
 	Visit website for more info, https://www.npmjs.com/package/chrome-launcher
 `)
 const {port, chromePath, userDataDir, startingUrl, ...flags} = cli.flags
