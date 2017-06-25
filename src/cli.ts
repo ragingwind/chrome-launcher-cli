@@ -24,7 +24,10 @@ const cli = meow(`
 	Visit website for more info, https://www.npmjs.com/package/chrome-launcher
 `)
 const {port, chromePath, userDataDir, startingUrl, ...flags} = cli.flags
-const chromeFlags = Object.keys(flags).map(flag => `--${decamelize(flag, '-')}`)
+const chromeFlags = Object.keys(flags).map(flag => {
+	return `--${decamelize(flag, '-')}`
+		+ (typeof flags[flag] === 'string' ? ` ${flags[flag]}` : '')
+})
 
 chromeLauncher.launch({
 	port,
