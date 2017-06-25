@@ -7,7 +7,7 @@ const cli = meow(`
 	Usage
 	  $ chrome-launcher [input]
 	Options
-  	--port: emote debugging port number to use.
+  	--port: Remote debugging port number to use.
   	--chrome-path: Explicit path of intended Chrome binary
   	--user-data-dir: Chrome profile path to use
 		--starting-url: Starting URL to open the browser with, default is about:blank
