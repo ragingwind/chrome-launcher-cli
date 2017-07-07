@@ -25,11 +25,12 @@
   ],
   "keywords": [
     "chrome",
-    "chrome extension",
+		"chrome extension",
+		"chrome launcher",
     "cli"
   ],
   "dependencies": {
-    "chrome-launcher": "file:../lighthouse/chrome-launcher",
+    "chrome-launcher": "^0.4.0",
     "decamelize": "^1.2.0",
     "meow": "^3.7.0"
   },
