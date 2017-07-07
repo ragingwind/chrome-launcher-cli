@@ -29,7 +29,7 @@
     "cli"
   ],
   "dependencies": {
-    "chrome-launcher": "^0.2.1",
+    "chrome-launcher": "file:../lighthouse/chrome-launcher",
     "decamelize": "^1.2.0",
     "meow": "^3.7.0"
   },
