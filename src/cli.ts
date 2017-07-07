@@ -12,6 +12,7 @@ const cli = meow(`
 		--chrome-path: Explicit path of intended Chrome binary
 		--user-data-dir: Chrome profile path to use
 		--starting-url: Starting URL to open the browser with, default is about:blank
+		--enable-extensions: Enable option for loading extensions
 
 	Chrome Flags
 		Additional flags to pass to Chrome like '--headless', '--disable-gpu'
@@ -21,12 +22,22 @@ const cli = meow(`
 		$ chrome
 		# Run Chrome browser in headless mode
 		$ chrome --headless
+		# Run Chrome browser with chrome extension
+		chrome
+			--app=file:///extension-test/index.html \
+			--system-developer-mode \
+			--load-extension=/extension-app
+			--enable-extensions
+
 	Visit website for more info, https://www.npmjs.com/package/chrome-launcher
 `)
-const {port, chromePath, userDataDir, startingUrl, ...flags} = cli.flags
+const {
+	port, chromePath, userDataDir, startingUrl, enableExtensions, ...flags
+} = cli.flags
+
 const chromeFlags = Object.keys(flags).map(flag => {
 	return `--${decamelize(flag, '-')}`
-		+ (typeof flags[flag] === 'string' ? ` ${flags[flag]}` : '')
+		+ (typeof flags[flag] === 'string' ? `=${flags[flag]}` : '')
 })
 
 chromeLauncher.launch({
@@ -34,7 +45,8 @@ chromeLauncher.launch({
 	chromePath,
 	userDataDir,
 	startingUrl,
-	chromeFlags
+	chromeFlags,
+	enableExtensions
 }).then(chrome => {
 	const exitHandler = err => {
 		chrome.kill().then(() => {
