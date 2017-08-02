@@ -1,6 +1,6 @@
 {
   "name": "chrome-launcher-cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Chrome Launcher for CLI",
   "license": "MIT",
   "repository": "ragingwind/chrome-launcher-cli",
@@ -25,8 +25,8 @@
   ],
   "keywords": [
     "chrome",
-		"chrome extension",
-		"chrome launcher",
+    "chrome extension",
+    "chrome launcher",
     "cli"
   ],
   "dependencies": {
