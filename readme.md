@@ -16,6 +16,13 @@ $ npm install -g chrome-launcher-cli
 chrome --help
 ```
 
+## Receipts
+
+### Test with Chrome Extension
+
+```
+chrome --app=file://test/index.html --system-developer-mode --load-extension=/test/extension --enable-extensions
+```
 
 ## License
 
